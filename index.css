@@ -139,7 +139,7 @@ li {
 }
 
 .first-section {
-  background-image: url("/images/solar-panels-meadow\ 1.png");
+  background-image: url("images/solar-panels-meadow\ 1.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: 650px;
@@ -310,7 +310,7 @@ li {
 }
 
 .third-section {
-  background-image: url("/images/8116\ 1.png");
+  background-image: url("images/8116\ 1.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 505px;
@@ -454,7 +454,7 @@ li {
 
 .fifth-section {
   margin-top: 20px;
-  background-image: url("/images/8116\ 1\ \(1\).png");
+  background-image: url("images/8116\ 1\ \(1\).png");
   background-size: cover;
   background-repeat: no-repeat;
   height: 505px;
