@@ -25,6 +25,7 @@ li {
 
 .section {
   padding: 10px 80px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .nav {
@@ -142,20 +143,21 @@ li {
   background-image: url("images/solar-panels-meadow 1.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   height: 650px;
+  overflow: hidden;
+
+  > .pagination {
+    margin: 30px 0 90px 0;
+  }
 }
 
 .first-section-container {
   max-width: 730px;
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: center;
-  gap: 30px;
 
-  > div:first-child {
-    margin-bottom: 60px;
-  }
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
@@ -313,6 +315,7 @@ li {
   background-image: url("images/8116 1.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 505px;
 
   > div {
@@ -457,6 +460,7 @@ li {
   background-image: url("images/8116 1 (1).png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   height: 505px;
 
   display: flex;
@@ -948,12 +952,16 @@ li {
     padding: 5px 30px;
   }
 
+  .first-section {
+    max-height: 300px;
+  }
+
+  .pagination {
+    display: none;
+  }
   .first-section-container {
-    padding-top: 30px;
-    > .pagination {
-      display: none;
-      visibility: hidden;
-    }
+    padding-top: 60px;
+    padding-bottom: 60px;
 
     > .content {
       display: flex;
@@ -990,18 +998,19 @@ li {
 
   .third-section {
     background-position-x: -575px;
+    height: 450px;
     > div {
       /* padding: 40px 0; */
 
       > h1 {
         color: black;
-        font-size: 20px;
+        font-size: 24px;
         line-height: 25px;
       }
 
       > p {
-        font-size: 14px;
-        line-height: 20px;
+        font-size: 18px;
+        line-height: 24px;
       }
 
       > button {
@@ -1017,8 +1026,8 @@ li {
     }
 
     > p {
-      font-size: 10px;
-      line-height: 14px;
+      font-size: 16px;
+      line-height: 20px;
     }
   }
 
@@ -1069,7 +1078,7 @@ li {
           }
 
           > button {
-            padding: 6px 18px;
+            padding: 7px 18px;
             right: 40px;
             font-size: 12px;
             line-height: 12px;
@@ -1094,7 +1103,7 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
     gap: 30px;
 
     > .left {
@@ -1103,8 +1112,16 @@ li {
       align-items: center;
     }
 
+    > .right {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+
     > .right > form {
-      margin-top: 20px;
+      margin-right: 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -1117,10 +1134,9 @@ li {
   }
 }
 
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 993px) {
   .hidden {
     display: none;
-    visibility: hidden;
   }
 }
 
@@ -1162,3 +1178,13 @@ li {
     margin-top: 20px;
   }
 } */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
